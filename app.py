@@ -2,6 +2,7 @@ from flask import Flask, jsonify
 from flask_cors import CORS
 
 app = Flask(__name__)
+CORS(app)
 electronics = [
     {
         "Info": "iPhone 15 Charger Fast Charging, iPad Charger 4Pack 6FT USB C to C Charging Cable Cord with 4Pack 20W iPhone Fast Charger Block for iPhone 15/15 pro/15 pro max/15 Plus,iPad Pro 12.9/11 in,iPad air 5/4",
@@ -401,4 +402,4 @@ def get_laptops():
 
 
 if __name__ == "__main__":
-    CORS(app)
+    app.run(debug=True)
